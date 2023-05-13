@@ -1,0 +1,124 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  margin: 0;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+/* Colors */
+/* Tailwind grays because I love them */
+/* Extracted from: https://gist.github.com/minutiae/3983bb128ad1756ae67ca1bccc184d4c?permalink_comment_id=4417702#gistcomment-4417702 */
+@keyframes rotate-blob {
+  0% {
+    transform-origin: center;
+    rotate: 0deg;
+  }
+  50% {
+    transform: scale(1, 1.5);
+  }
+  100% {
+    transform-origin: center;
+    rotate: 360deg;
+  }
+}
+.app {
+  min-height: 100vh;
+}
+.app__container {
+  position: relative;
+  padding: 2rem;
+  width: 100%;
+  min-height: 100vh;
+}
+.app__background {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+.app__background__blob {
+  position: absolute;
+  aspect-ratio: 1;
+  height: 30rem;
+  border-radius: 50%;
+  background: linear-gradient(to bottom right, #6add2c 0%, #fd85ff 100%);
+  animation: rotate-blob linear 20s infinite;
+}
+.app__background__blur-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  pointer-events: none;
+  backdrop-filter: blur(200px);
+}
+.app__background__dashed-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  opacity: 0.02;
+  background-size: 50px 50px;
+  background-image: linear-gradient(to right, #eee7ee 1px, transparent 1px), linear-gradient(to bottom, #eee7ee 1px, transparent 1px);
+}
+.app__background__overlay {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(11, 1, 14, 0.1));
+}
+
+html, body, main {
+  overflow: clip;
+}
+
+main {
+  background-color: #0b010e;
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,11 @@
+@use "./scss/reset" as r;
+@use "./scss/app" as a;
+@use "./scss/variables" as v;
+
+html, body, main {
+  overflow: clip;
+}
+
+main {
+  background-color: v.$black;
+}
