@@ -29,9 +29,17 @@ function App() {
                 <div ref={gridBgRef} className={"app__background__dashed-layer"}/>
                 <div className={"app__background__overlay"}/>
             </section>
-            <section className={"app__container"}>
-
-            </section>
+            <header className={"app__header"}>
+                <section className={"app__header__intro"}>
+                    <h1>Car Accident Severity Classifier</h1>
+                    <p>This is a classification algorithm based model trained with <a
+                        href={"https://www.kaggle.com/datasets/sobhanmoosavi/us-accidents?datasetId=199387&sortBy=voteCount"}
+                        target={"_blank"} rel={"noreferrer"}>this dataset</a>, intended to predict an accident severity
+                        based on given conditions. You can interact with the model through this website by filling in
+                        the form below. Once the data is in and you're ready, hit <span>predict</span> to give the model
+                        a go!</p>
+                </section>
+            </header>
         </main>
     );
 }

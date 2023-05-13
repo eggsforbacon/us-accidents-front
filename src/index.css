@@ -1,3 +1,5 @@
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -63,11 +65,45 @@ input {
 .app {
   min-height: 100vh;
 }
-.app__container {
+.app__header {
   position: relative;
   padding: 2rem;
   width: 100%;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.app__header__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  text-align: center;
+  gap: 1rem;
+  width: 64rem;
+}
+.app__header__intro h1 {
+  font-size: xxx-large;
+}
+.app__header__intro p {
+  color: #d4d4d4;
+  font-size: larger;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+}
+.app__header__intro p a {
+  color: #6add2c;
+}
+.app__header__intro p a::selection {
+  color: #7a127b;
+}
+.app__header__intro p span {
+  font-weight: bold;
+  background: linear-gradient(120deg, #6add2c, #d958da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .app__background {
   position: absolute;
@@ -81,7 +117,7 @@ input {
   aspect-ratio: 1;
   height: 30rem;
   border-radius: 50%;
-  background: linear-gradient(to bottom right, #6add2c 0%, #fd85ff 100%);
+  background: linear-gradient(to bottom right, #6add2c 0%, #d958da 100%);
   animation: rotate-blob linear 20s infinite;
 }
 .app__background__blur-layer {
@@ -114,11 +150,21 @@ input {
 }
 
 html, body, main {
+  font-family: "Inter", sans-serif;
   overflow: clip;
 }
 
 main {
   background-color: #0b010e;
+}
+
+main *::selection {
+  background-color: #6add2c;
+  color: #0b010e;
+}
+
+main * p, main * h1, main * h2, main * h3, main * h4, main * h5, main * h6 {
+  color: #fce8ff;
 }
 
 /*# sourceMappingURL=index.css.map */
