@@ -23,6 +23,7 @@
       text-align: center;
       gap: 1rem;
       width: 64rem;
+
       h1 {
         font-size: xxx-large;
       }
@@ -37,7 +38,7 @@
           color: v.$primary;
 
           &::selection {
-            color: v.$dark-accent;
+            color: v.$white;
           }
         }
 
@@ -46,6 +47,11 @@
           background: linear-gradient(120deg, v.$primary, v.$accent);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
+
+          &::selection {
+            color: v.$white;
+            -webkit-text-fill-color: v.$white;
+          }
         }
       }
     }
@@ -57,6 +63,7 @@
     height: 100vh;
     top: 0;
     left: 0;
+    overflow-x: clip;
 
     &__blob {
       position: absolute;
@@ -85,9 +92,8 @@
       min-height: 100vh;
       opacity: 0.02;
       background-size: 50px 50px;
-      background-image:
-              linear-gradient(to right, v.$secondary 1px, transparent 1px),
-              linear-gradient(to bottom, v.$secondary 1px, transparent 1px);
+      background-image: linear-gradient(to right, v.$secondary 1px, transparent 1px),
+      linear-gradient(to bottom, v.$secondary 1px, transparent 1px);
 
     }
 
@@ -100,5 +106,13 @@
       min-height: 100vh;
       background: linear-gradient(to bottom, transparentize(black, 0.7) 0%, transparentize(v.$black, 0.9));
     }
+  }
+
+  &__content {
+    position: relative;
+    width: 100%;
+    min-height: 62rem;
+    background-color: transparentize(v.$black, 0.1);
+    backdrop-filter: blur(200px);
   }
 }

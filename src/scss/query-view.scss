@@ -1,0 +1,77 @@
+@use "./variables" as v;
+
+.query-view {
+  min-height: 56rem;
+  width: 86rem;
+  border-radius: 1rem;
+  background-color: v.$black;
+  color: v.$white;
+  border: 2px solid v.$neutral-600;
+  position: absolute;
+  top: -6rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 2rem;
+  //box-shadow:;
+
+  &__heading {
+    min-height: 6rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 12rem;
+
+    h3 {
+      font-size: x-large;
+    }
+
+    &__toggle {
+      background: transparent;
+      position: relative;
+      border: none;
+      width: 4.5rem;
+      height: 2rem;
+      border-radius: 0.75rem;
+      overflow: clip;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &__track {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: transparentize(v.$neutral-800, 0.6);
+        width: 100%;
+        height: 100%;
+      }
+
+      &__bulb {
+        position: absolute;
+        transition: all 200ms ease-in-out;
+        height: 90%;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        top: 50%;
+
+        &__active {
+          transform: translate3d(-100%, -50%, 0);
+          background-color: v.$accent;
+
+        }
+
+        &__inactive {
+          background-color: v.$primary;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+}

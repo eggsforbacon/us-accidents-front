@@ -1,4 +1,5 @@
 import React, {useRef} from 'react';
+import {QueryView} from "./QueryView";
 
 function App() {
 
@@ -40,6 +41,9 @@ function App() {
                         a go!</p>
                 </section>
             </header>
+            <article className={"app__content"}>
+                <QueryView />
+            </article>
         </main>
     );
 }
