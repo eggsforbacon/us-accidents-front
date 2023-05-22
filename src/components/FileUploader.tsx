@@ -1,4 +1,4 @@
-import "./scss/file-uploadar.css";
+import "../scss/file-uploader.css";
 import {useState} from "react";
 
 export const FileUploader = () => {

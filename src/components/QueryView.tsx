@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {FileUploader} from "./FileUploader";
 import {Form} from "./Form";
-import "./scss/query-view.css";
+import "../scss/query-view.css";
 
 export const QueryView = () => {
     const [bulkMode, setBulkMode] = useState(false);
