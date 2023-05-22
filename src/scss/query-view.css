@@ -1,0 +1,71 @@
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* Colors */
+/* Tailwind grays because I love them */
+/* Extracted from: https://gist.github.com/minutiae/3983bb128ad1756ae67ca1bccc184d4c?permalink_comment_id=4417702#gistcomment-4417702 */
+.query-view {
+  min-height: 56rem;
+  width: 86rem;
+  border-radius: 1rem;
+  background-color: #0b010e;
+  color: #fdf9ff;
+  border: 2px solid #525252;
+  position: absolute;
+  top: -6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 2rem;
+}
+.query-view__heading {
+  min-height: 6rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 12rem;
+}
+.query-view__heading h3 {
+  font-size: x-large;
+}
+.query-view__heading__toggle {
+  background: transparent;
+  position: relative;
+  border: none;
+  width: 4.5rem;
+  height: 2rem;
+  border-radius: 0.75rem;
+  overflow: clip;
+}
+.query-view__heading__toggle:hover {
+  cursor: pointer;
+}
+.query-view__heading__toggle__track {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(38, 38, 38, 0.4);
+  width: 100%;
+  height: 100%;
+}
+.query-view__heading__toggle__bulb {
+  position: absolute;
+  transition: all 200ms ease-in-out;
+  height: 90%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  top: 50%;
+}
+.query-view__heading__toggle__bulb__active {
+  transform: translate3d(-100%, -50%, 0);
+  background-color: #d958da;
+}
+.query-view__heading__toggle__bulb__inactive {
+  background-color: #6add2c;
+  transform: translateY(-50%);
+}
+
+/*# sourceMappingURL=query-view.css.map */
