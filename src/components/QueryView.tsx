@@ -14,6 +14,7 @@ export const QueryView = () => {
         temperature : "",
         windSpeed : "",
     });
+    const [fileState, setFileState] = useState({} as FileList);
 
     const toggleBulkMode = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
@@ -31,7 +32,7 @@ export const QueryView = () => {
             </section>
             {bulkMode ? (
                 <>
-                    <FileUploader />
+                    <FileUploader  fileState={[fileState, setFileState]}/>
                 </>
             ) : (
                 <>

@@ -1,7 +1,83 @@
+@use "variables" as v;
+
 .file-uploader {
   position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: start;
+  gap: 2rem;
 
   &__dropzone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 80%;
+    height: 36rem;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='16' ry='16' stroke='%23737373AF' stroke-width='7' stroke-dasharray='7%2c 20' stroke-dashoffset='92' stroke-linecap='square'/%3e%3c/svg%3e");
+    border-radius: 1rem;
+    transition: all 300ms ease-in-out;
+    color: v.$neutral-400;
 
+    &:hover {
+      color: v.$accent;
+      cursor: pointer;
+      background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='16' ry='16' stroke='%23D958DAFF' stroke-width='7' stroke-dasharray='7%2c 20' stroke-dashoffset='92' stroke-linecap='square'/%3e%3c/svg%3e");
+    }
+
+    h2 {
+      text-align: center;
+      font-size: xx-large;
+      font-weight: 400;
+      color: inherit;
+
+      span {
+        font-size: large;
+        font-weight: 300;
+      }
+    }
+
+    button {
+      height: 3.5rem;
+      width: 14rem;
+      border: solid 2px v.$neutral-400;
+      background-color: transparent;
+      border-radius: 1rem;
+      color: v.$neutral-400;
+      transition: all 200ms ease-in-out;
+      font-weight: bold;
+      font-size: large;
+
+      &:hover {
+        cursor: pointer;
+        transform: translateY(-0.25rem);
+        color: v.$accent;
+        border-color: v.$accent;
+      }
+    }
+
+  }
+
+  &__submit {
+    height: 3.5rem;
+    width: 14rem;
+    border: solid 2px v.$accent;
+    background-color: transparent;
+    border-radius: 1rem;
+    color: v.$accent;
+    font-size: large;
+    transition: all 200ms ease-in-out;
+    font-weight: bold;
+
+    &:hover {
+      cursor: pointer;
+      transform: translateY(-0.5rem);
+      background-color: white;
+      color: v.$neutral-800;
+      border-color: white;
+    }
   }
 }
