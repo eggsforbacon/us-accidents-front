@@ -1,16 +1,17 @@
-import React, {useState} from "react";
+import React, {ChangeEventHandler, useState} from "react";
 import "./../scss/input.css";
 
 export const Input = (
     props : {
         type : string,
-        label : string | JSX.Element,
+        label : string,
         name : string,
-        icon? : JSX.Element,
         required? : boolean,
         autoFocus? : boolean,
-        actionIcon? : JSX.Element,
-        actionClick? : React.MouseEventHandler<HTMLButtonElement>
+        actionClick? : React.MouseEventHandler<HTMLButtonElement>,
+        color? : string
+        value? : string | number,
+        onChange? : ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>
     }
 ) => {
 
@@ -31,17 +32,13 @@ export const Input = (
         <div tabIndex={1} onFocus={handleFocusIn} onBlur={handleFocusOut}
              className={`input ${isFocused ? "input__focused" : ""}`}>
             <label htmlFor={props.name} className={"input__label"}>{props.label}</label>
-            <textarea {...props} className={"input__box"}/>
+            <textarea value={props.value || ''} {...props} className={"input__box"}/>
         </div>
     ) : (
         <div tabIndex={1} onFocus={handleFocusIn} onBlur={handleFocusOut}
-             className={`input ${isFocused ? "input__focused" : ""}`}>
+             className={`input ${isFocused ? `input__focused__${props.color || ''}` : ""}`}>
             <label htmlFor={props.name} className={"input__label"}>{props.label}</label>
-            {props.icon || <div className={"input__icon"}/>}
-            <input {...props} step={"any"} className={"input__box"}/>
-            {props.actionClick && <span tabIndex={0} onClick={props.actionClick}>
-                {props.actionIcon || <></>}
-            </span>}
+            <input onChange={props.onChange} value={props.value || ''} {...props} step={"any"} className={"input__box"}/>
         </div>
     );
 }

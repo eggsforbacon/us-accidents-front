@@ -1,3 +1,38 @@
-
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* Colors */
+/* Tailwind grays because I love them */
+/* Extracted from: https://gist.github.com/minutiae/3983bb128ad1756ae67ca1bccc184d4c?permalink_comment_id=4417702#gistcomment-4417702 */
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 2rem;
+}
+.form__group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.form__submit {
+  height: 3.5rem;
+  width: 14rem;
+  border: solid 2px #6add2c;
+  background-color: transparent;
+  border-radius: 1rem;
+  color: #6add2c;
+  font-size: large;
+  transition: all 200ms ease-in-out;
+  font-weight: bold;
+}
+.form__submit:hover {
+  cursor: pointer;
+  transform: translateY(-0.5rem);
+  background-color: white;
+  color: #262626;
+  border-color: white;
+}
 
 /*# sourceMappingURL=form.css.map */

@@ -22,6 +22,14 @@
     * {
       color: v.$accent;
     }
+
+    &__green {
+      color: v.$primary;
+
+      * {
+        color: v.$primary;
+      }
+    }
   }
 
   &__label {
@@ -59,7 +67,7 @@
   }
 
   &__box {
-    padding-inline: 0.5rem;
+    padding-inline: 1.5rem;
     width: 100%;
     height: 3.5rem;
     background-color: transparent;

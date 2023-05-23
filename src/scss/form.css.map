@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"form.css"}
+{"version":3,"sourceRoot":"","sources":["variables.scss","form.scss"],"names":[],"mappings":"AAAA;AAEQ;AAIR;AASA;AAEA;ACfA;EACE;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA,ODdM;ECeN;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA,OD6BQ;EC5BR","file":"form.css"}

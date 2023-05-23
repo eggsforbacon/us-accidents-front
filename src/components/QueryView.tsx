@@ -5,6 +5,15 @@ import "../scss/query-view.css";
 
 export const QueryView = () => {
     const [bulkMode, setBulkMode] = useState(false);
+    const [formState, setFormState] = useState({
+        clear : "",
+        distance : "",
+        cityFreq : "",
+        stateFreq : "",
+        dayOfYear : "",
+        temperature : "",
+        windSpeed : "",
+    });
 
     const toggleBulkMode = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
@@ -26,7 +35,7 @@ export const QueryView = () => {
                 </>
             ) : (
                 <>
-                    <Form />
+                    <Form saveState={[formState, setFormState]} />
                 </>
             )}
         </section>
